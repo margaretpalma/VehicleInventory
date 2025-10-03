@@ -1,3 +1,4 @@
+
 public class Vehicle {
 
     private long vehicleId;
@@ -6,6 +7,14 @@ public class Vehicle {
     private int odometerReading;
     private float price;
 
+    public Vehicle() {
+    this.vehicleId = 0;
+    this.makeModel = "";
+    this.color = "";
+    this.odometerReading = "";
+    this.price = "";
+
+    }
     // Constructor
     public Vehicle(long vehicleId, String makeModel, String color, int odometerReading, float price) {
         this.vehicleId = vehicleId;
@@ -15,7 +24,6 @@ public class Vehicle {
         this.price = price;
     }
 
-    // Getters and Setters
     public long getVehicleId() {
         return vehicleId;
     }
@@ -55,4 +63,4 @@ public class Vehicle {
     public void setPrice(float price) {
         this.price = price;
     }
-}
+
