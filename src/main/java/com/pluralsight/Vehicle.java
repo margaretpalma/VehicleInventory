@@ -7,6 +7,7 @@ public class Vehicle {
         private int odometerReading;
         private float price;
 
+        //constructor
         public Vehicle(long vehicleId, String makeModel, String color, int odometerReading, float price) {
             this.vehicleId = vehicleId;
             this.makeModel = makeModel;
@@ -14,6 +15,8 @@ public class Vehicle {
             this.odometerReading = odometerReading;
             this.price = price;
         }
+
+        //getters and setters
         public long getVehicleId() {
             return vehicleId;
         }
@@ -58,13 +61,12 @@ public class Vehicle {
         public String toString() {
             return String.format("%10d %18s %10s %10d %10.2f", vehicleId, makeModel, color, odometerReading, price);
         }
-
+        //table formatting
         public static String getTableHeader(){
             return  String.format("%s %18s %10s %10s %10s\n------------------------------------------------------------------------", "Vehicle VIN", "Make / Model", "Color", "Mileage", "Price");
         }
     }
-
+//how to tell which goes where:
 //what does it belong to? does app have vehicle id or does vehicle have vehicleId
 //does vehicle have inventory or does app have vehicleinventory?
 
-}
